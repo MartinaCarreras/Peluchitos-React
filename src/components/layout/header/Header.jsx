@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import style from "./Header.module.css";
-const { header, logo, header_1, menu } = style;
+const { header, logo, header_1, menu, menuBox, hiddenMenu } = style;
 import { IoIosMenu } from "react-icons/io";
 
 export const Header = () => {
@@ -28,6 +28,13 @@ export const Header = () => {
             <li className={header_1}>Contacto</li>
           </Link>
           <label htmlFor="menuHamb"><IoIosMenu className={menu}/></label>
+          <input type="checkbox" className={menuBox} id="menuHamb"/>
+          <ul className={ hiddenMenu }>
+            <li>Productos</li> 
+            <li>Cotización</li> 
+            <li>Blog</li> 
+            <li>Contacto</li> 
+          </ul>
         </ul>
       </nav>
     </header>

@@ -18,6 +18,27 @@
     color: #C6C5B9;
     size: 50px;
 }
+.menuBox {
+    display: none;
+    &:checked + .hiddenMenu {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.hiddenMenu {
+    display: none;
+    position: absolute;
+    padding: 20px 20px 20px 20px;
+    right: 0;
+    margin-top: 352px;
+    background-color: #C6C5B9;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    transition: all 3s;
+    & li {
+        border-bottom: 1px solid black;
+    }
+}
 @media (width < 786px) {
     .header {
         align-items: normal;
