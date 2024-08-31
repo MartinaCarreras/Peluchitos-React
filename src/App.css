@@ -6,29 +6,6 @@
   text-decoration: none !important;
   list-style: none;
 }
-header {
-  background-color: #65743A;
-  height: 160px;
-  border-left: #3F4924 2.3721275019vw solid;
-  border-right: #3F4924 2.3721275019vw solid;
-  border-bottom: #65743A 1px solid;
-  position: sticky;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 3;
-}
-header li {
-  transform: scale(1, 1);
-  transition: all 0.3s;
-}
-header li:hover {
-  transform: scale(1.1, 1.1);
-}
-header a {
-  color: #C6C5B9 !important;
-}
 
 @media (max-width: 370px) {
   header {
