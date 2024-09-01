@@ -10,7 +10,7 @@ export const HiddenMenu = () => {
           <SlArrowDown />
         </button>
       </h2>
-      <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div id="collapseTwo" className="accordion-collapse collapse accordion-body-container animate__slideOutDown" data-bs-parent="#accordionExample">
         <div className="accordion-body">
           <Link to="/productos">
             <li className="header_li_1">Productos</li>

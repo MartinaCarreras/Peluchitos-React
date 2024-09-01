@@ -53,7 +53,40 @@ header {
         }
         .accordion-item {
             width: 10%;
+            display: flex;
+            flex-direction: column;
+
+            .accordion-header {
+                align-self: center;
+                margin-top: 57px;
+            }
+            .accordion-body-container {
+
+                .accordion-body {
+                    margin-top: 57px;
+                    background-color: #798b48;
+                    border-bottom-left-radius: 15px;
+                    border-bottom-right-radius: 15px;
+
+                    a {
+                        color: #C6C5B9;
+                        display: flex;
+                        justify-content: center;
+
+                        .header_li_1 {
+                            transform: scale(1, 1);
+                            transition: all 0.3s;
+                            font-size: 17px !important;
+                            padding-bottom: 5px;
+                            padding-top: 5px;
             
+                            &:hover {
+                                transform: scale(1.1, 1.1);
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
