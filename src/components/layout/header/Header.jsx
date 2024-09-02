@@ -1,33 +1,31 @@
 import { Link } from "react-router-dom";
-import { HiddenMenu } from "./HiddenMenu.jsx";
+import { HiddenMenu, HeaderMenu } from './index.js'
 import './header.css';
 
-export const Header = () => {
+export const Header = ({menu, hamb}) => {
+  
   return (
     <header>
       <nav>
         <ul className="header">
           <Link to="/">
-            <img
-              src="https://i.imgur.com/DjsgGIx.jpg"
-              alt="logo"
-              className="logo"
-            />
+            <img src="https://i.imgur.com/DjsgGIx.jpg" alt="logo" className="logo"/>
           </Link>
-          <Link to="/productos">
-            <li className="header_li_1">Productos</li>
-          </Link>
-          <Link to="/productos">
-            <li className="header_li_1">Cotización</li>
-          </Link>
-          <Link to="/productos">
-            <li className="header_li_1">Blog</li>
-          </Link>
-          <Link to="/productos">
-            <li className="header_li_1">Contacto</li>
-          </Link>
+          { menu != [] && menu.map(({key, path, title})=> {
+            return(
+              <HeaderMenu
+                key={key}
+                path={path}
+                title={title}
+              />
+            );
+          })}
         </ul>
-        <HiddenMenu/>
+        {hamb != [] && 
+          <HiddenMenu
+          hamb={hamb}
+          />
+        }
       </nav>
     </header>
   );

@@ -7,10 +7,10 @@
   box-sizing: border-box;
   text-decoration: none !important;
   list-style: none;
-}
+};
 
 @media (max-width: 370px) {
   header {
     height: 100px;
-  }
-}
+  };
+};

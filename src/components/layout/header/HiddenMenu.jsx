@@ -1,8 +1,9 @@
 import './header.css';
 import { SlArrowDown } from "react-icons/sl";
 import { Link } from 'react-router-dom';
+import { HeaderMenu } from './headerMenu';
 
-export const HiddenMenu = () => {
+export const HiddenMenu = ({hamb}) => {
   return (
     <div className="accordion-item">
       <h2 className="accordion-header">
@@ -12,18 +13,15 @@ export const HiddenMenu = () => {
       </h2>
       <div id="collapseTwo" className="accordion-collapse collapse accordion-body-container animate__slideOutDown" data-bs-parent="#accordionExample">
         <div className="accordion-body">
-          <Link to="/productos">
-            <li className="header_li_1">Productos</li>
-          </Link>
-          <Link to="/productos">
-            <li className="header_li_1">Cotización</li>
-          </Link>
-          <Link to="/productos">
-            <li className="header_li_1">Blog</li>
-          </Link>
-          <Link to="/productos">
-            <li className="header_li_1">Contacto</li>
-          </Link>
+          {hamb.map(({ key, path, title })=>{
+            return(
+              <HeaderMenu
+                key={key}
+                path={path}
+                title={title}
+              />
+            )
+          })}
         </div>
       </div>
     </div>

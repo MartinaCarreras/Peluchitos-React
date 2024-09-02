@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom"
-import { Header, Footer } from "./index"
+import { HeaderContainer, Footer } from "./index"
 
 export const Layout = () => {
   return (
     <>
-        <Header/>
+        <HeaderContainer/>
         <Outlet/>
         <Footer/>
     </>
