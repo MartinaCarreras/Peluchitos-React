@@ -67,6 +67,7 @@ header {
                     background-color: #798b48;
                     border-bottom-left-radius: 15px;
                     border-bottom-right-radius: 15px;
+                    width: 100%;
 
                     a {
                         color: #C6C5B9;
@@ -110,22 +111,36 @@ header {
             .header {
                 width: 77%;
             }
-            .accordion-body {
+            .accordion-item {
                 width: 23%;
             }
         }
     }
 }
 
-@media ( max-width: 430px ) {
+@media ( max-width: 429px ) {
     header {
         nav {
             .header {
                 width: 70%;
             }
-            .accordion-body {
+            .accordion-item {
                 width: 30%;
             }
         }
     }
 }
+
+/* @media ( max-width: 365px ) {
+    header {
+        nav {
+            .accordion-item {
+                .accordion-body-container {
+                    .accordion-body {
+                        width: 97.6278724981vw;
+                    }
+                }
+            }
+        }
+    }
+} */

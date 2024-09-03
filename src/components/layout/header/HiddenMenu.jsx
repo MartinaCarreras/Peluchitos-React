@@ -11,7 +11,7 @@ export const HiddenMenu = ({hamb}) => {
           <SlArrowDown />
         </button>
       </h2>
-      <div id="collapseTwo" className="accordion-collapse collapse accordion-body-container animate__slideOutDown" data-bs-parent="#accordionExample">
+      <div id="collapseTwo " className="accordion-collapse collapse accordion-body-container animate__slideOutDown" data-bs-parent="#accordionExample">
         <div className="accordion-body">
           {hamb.map(({ key, path, title })=>{
             return(

@@ -20,9 +20,7 @@ const HeaderContextProvider = ( { children } ) => {
         await setFrom(tempFrom);
         await setTo(tempTo);        
     }
-    const dones = async( done, limit, set, width ) =>  {
-        // console.log(`init ${limit}`);
-        
+    const dones = async( done, limit, set, width ) =>  { //  Para saber si mover o no
         if( ( !done && width < limit) ) {
             await movement( actMenu, actHamb, setActMenu, setActHamb );            
             await set(true);
@@ -32,9 +30,16 @@ const HeaderContextProvider = ( { children } ) => {
         }
         
     }
+    const FullHambFunction = async( done ) => {
+        if ( width < 430 && !done ) {
+            // document.querySelector('.show')
+        } else if ( width >= 430 && done) {
+
+        }
+    }
 
 
-    return <HeaderContext.Provider value={{ actMenu, actHamb, setActWidth, dones, width }} >
+    return <HeaderContext.Provider value={{ actMenu, actHamb, setActWidth, dones, width, FullHambFunction }} >
         { children }
     </HeaderContext.Provider>
 }
