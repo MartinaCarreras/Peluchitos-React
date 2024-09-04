@@ -110,6 +110,10 @@ header {
         nav {
             .header {
                 width: 77%;
+
+                a .header_li_1 {
+                    font-size: 18px !important;
+                }
             }
             .accordion-item {
                 width: 23%;
