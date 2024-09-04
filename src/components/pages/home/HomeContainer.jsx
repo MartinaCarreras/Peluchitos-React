@@ -10,8 +10,9 @@ export const HomeContainer = () => {
 
   return (
     <>
-        {showHamb && fullHamb ? <FullHeaderContainer/> : <Home/>}
+        {/* {showHamb && fullHamb ? <FullHeaderContainer/> : <Home/>} */}
         {/* <FullHeaderContainer/> */}
+        <Home/>
     </>
   )
 }

@@ -1,6 +1,10 @@
 import { useContext } from "react"
 import { HeaderContext } from "../../../context/headerContext"
-import { no_show, show } from './Footer.module.css'
+
+import './css/footer.css'
+import { no_show, show } from './css/Footer.module.css'
+
+import { Footer } from './Footer'
 
 
 export const FooterContainer = () => {
@@ -8,7 +12,11 @@ export const FooterContainer = () => {
     const classDiv = showHamb && fullHamb ? no_show : show ;
 
   return (
-    <div className={classDiv}>FooterContainer</div>
-    // <div className={no_show}>FooterContainer</div>
+    <>
+    <Footer/>
+    {/* <div className={show}>FooterContainer</div> */}
+    {/* <div className={classDiv}>FooterContainer</div> */}
+    {/* <div className={no_show}>FooterContainer</div> */}
+    </>
   )
 }
