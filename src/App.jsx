@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Layout } from './components/layout/'
-import { Home, ProductList } from './components/pages/'
+import { ProductList } from './components/pages/'
 import HeaderContextProvider from './context/headerContext.jsx'
 import './App.css'
+import { HomeContainer } from './components/pages/home/HomeContainer.jsx'
 
 
 
@@ -15,7 +16,7 @@ function App() {
         <HeaderContextProvider>
           <Routes>
             <Route element={<Layout/>}>
-              <Route path='/' element={<Home/>}/>
+              <Route path='/' element={<HomeContainer/>}/>
               <Route path='/productos' element={<ProductList/>}/>
             </Route>
           </Routes>

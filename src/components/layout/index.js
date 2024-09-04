@@ -1,3 +1,3 @@
-export { Layout } from './Layout';
-export { Footer } from './footer/Footer';
-export { HeaderContainer } from './header/index'
+export { HeaderContainer, Header } from './header/index'
+export { FooterContainer, Footer } from './footer/index'
+export { Layout } from './Layout'

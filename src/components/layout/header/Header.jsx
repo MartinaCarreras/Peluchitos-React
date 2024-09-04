@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
-import { HiddenMenu, HeaderMenu } from './index.js'
+import { HeaderMenu, HiddenMenu } from "../../common";
 import './header.css';
 
-export const Header = ({menu, hamb}) => {
-  
+export const Header = ({menu, hamb, fullHamb, changeTo}) => {
   return (
     <header>
       <nav>
@@ -24,6 +23,8 @@ export const Header = ({menu, hamb}) => {
         {hamb != [] && 
           <HiddenMenu
           hamb={hamb}
+          fullHamb={fullHamb}
+          changeTo={changeTo}
           />
         }
       </nav>

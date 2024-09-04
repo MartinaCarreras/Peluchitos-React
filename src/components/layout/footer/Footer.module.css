@@ -1,0 +1,6 @@
+.no_show {
+    display: none;
+}
+.show {
+    display: initial;
+}

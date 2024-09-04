@@ -7,6 +7,8 @@ const HeaderContextProvider = ( { children } ) => {
     const [actMenu, setActMenu] = useState([{key: "1", path: "/productos", title: "Productos"},{key: "2", path: "/productos", title: "Cotización"},{key: "3", path: "/productos", title: "Blog"},{key: "4", path: "/productos", title: "Contacto"}]);
     const [actHamb, setActHamb] = useState([]);
     const [ width, setWidth ] = useState(window.innerWidth)
+    const [ fullHamb, setFullHamb ] = useState(false);
+    const [ showHamb, setShowHamb ] = useState(false);
 
     const setActWidth = () => {  //Función para actualizar el width
         setWidth( window.innerWidth )
@@ -23,23 +25,25 @@ const HeaderContextProvider = ( { children } ) => {
     const dones = async( done, limit, set, width ) =>  { //  Para saber si mover o no
         if( ( !done && width < limit) ) {
             await movement( actMenu, actHamb, setActMenu, setActHamb );            
-            await set(true);
+            set(true);
         } else if (width >= limit && done) {
             await movement( actHamb, actMenu, setActHamb, setActMenu );
-            await set(false)
+            set(false);
         }
-        
+        limit == 430 && FullHambFunction( done );        
     }
     const FullHambFunction = async( done ) => {
         if ( width < 430 && !done ) {
-            // document.querySelector('.show')
+            setFullHamb(true);
         } else if ( width >= 430 && done) {
-
+            setFullHamb(false)
         }
     }
+    const changeToFullHamb = () => {
+        setShowHamb(!showHamb)        
+    }
 
-
-    return <HeaderContext.Provider value={{ actMenu, actHamb, setActWidth, dones, width, FullHambFunction }} >
+    return <HeaderContext.Provider value={{ actMenu, actHamb, setActWidth, dones, width, fullHamb, showHamb, changeToFullHamb }} >
         { children }
     </HeaderContext.Provider>
 }

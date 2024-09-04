@@ -1,0 +1,22 @@
+.full_main {
+    background-color: #798b48;
+    height: calc(100vh - 130px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+
+    a {
+        color: #C6C5B9;
+
+        .header_li_1 {
+            font-size: 22px;
+            transform: scale(1, 1);
+            transition: all 0.3s;
+        }
+        &:hover {
+            transform: scale(1.1, 1.1);
+        }
+    }
+}
