@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-html, body {
-  height: 100%;
-  margin: 0;
-}
 * {
   font-family: "Shantell Sans", cursive;
   margin: 0;
@@ -11,6 +7,9 @@ html, body {
   box-sizing: border-box;
   text-decoration: none !important;
   list-style: none;
+};
+main {
+  min-height: calc(100vh - 130px - 60px);
 };
 
 @media (max-width: 370px) {
