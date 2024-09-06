@@ -89,6 +89,30 @@ header {
                 }
             }
         }
+        #cont-menu {
+            display: initial;
+        }
+        #blog-menu {
+            display: initial;
+        }
+        #cotiz-menu {
+            display: initial;
+        }
+        #prod-menu {
+            display: initial;
+        }
+        #prod-hamb {
+            display: none;
+        }
+        #cont-hamb {
+            display: none;
+        }
+        #blog-hamb {
+            display: none;
+        }
+        #cotiz-hamb {
+            display: none;
+        }
     }
 }
 
@@ -100,6 +124,13 @@ header {
             }
             .accordion-item {
                 width: 20%;
+
+            }
+            #cont-menu {
+                display: none;
+            }
+            #cont-hamb {
+                display: initial;
             }
         }
     }
@@ -118,6 +149,25 @@ header {
             .accordion-item {
                 width: 23%;
             }
+            #blog-menu {
+                display: none;
+            }
+            #blog-hamb {
+                display: initial;
+            }
+        }
+    }
+}
+
+@media ( max-width: 575px ) {
+    header {
+        nav {
+            #cotiz-menu {
+                display: none;
+            }
+            #cotiz-hamb {
+                display: initial;
+            }
         }
     }
 }
@@ -130,6 +180,12 @@ header {
             }
             .accordion-item {
                 width: 30%;
+            }
+            #prod-menu {
+                display: none;
+            }
+            #prod-hamb {
+                display: initial;
             }
         }
     }

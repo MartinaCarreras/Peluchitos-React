@@ -1,3 +1,55 @@
 .main {
     min-height: calc(100vh - 130px - 60px) !important;
+    background-color: #C6C5B9; 
+    border-left: #A9A89A 2.37212750185vw solid;
+    border-right: #A9A89A 2.37212750185vw solid;
+
+    .carousel-item {
+        padding: 30px 50px 30px 50px;
+    }
+    .body-main {
+        display: flex;
+
+        .products-main {
+            width: 80%;
+            margin: 20px 0 20px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .info-main {
+            margin: 40px 20px 40px 20px;
+            width: 20%;
+            background-color: #A9A89A;;
+            border-radius: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            div {
+                margin: 10px 0 10px 0;
+                color: #595959;
+                h3 {
+                    padding: 0 7px 0 7px;
+                    font-size: 18px;
+                    
+                    a {
+                        color: #333333;
+                    }
+                }
+                h4 {
+                    font-size: 17px;
+                    cursor: pointer;
+                }
+                .arrow {
+                    width: 100%;
+                }
+            }
+            .my-border-bottom {
+                border-bottom: 2px #595959 solid;
+                margin: 0 5% 0 5%;
+            }
+        }
+    }
 }

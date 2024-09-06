@@ -10,23 +10,22 @@ export const Header = ({menu, hamb, fullHamb, changeTo}) => {
           <Link to="/">
             <img src="https://i.imgur.com/DjsgGIx.jpg" alt="logo" className="logo"/>
           </Link>
-          { menu != [] && menu.map(({key, path, title})=> {
+          { menu != [] && menu.map(({key, path, title, id})=> {
             return(
               <HeaderMenu
                 key={key}
                 path={path}
                 title={title}
+                id={id}
               />
             );
           })}
         </ul>
-        {hamb != [] && 
-          <HiddenMenu
-          hamb={hamb}
-          fullHamb={fullHamb}
-          changeTo={changeTo}
-          />
-        }
+        <HiddenMenu
+        hamb={hamb}
+        fullHamb={fullHamb}
+        changeTo={changeTo}
+        />
       </nav>
     </header>
   );

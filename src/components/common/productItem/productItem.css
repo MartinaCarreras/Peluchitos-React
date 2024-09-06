@@ -1,0 +1,32 @@
+.article {
+    width: 21.1538461538vw;
+    background-color: #A9A89A;
+    margin: 20px 0.96153846153vw 20px 0.96153846153vw;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    transform: scale(1, 1);
+    transition: all 0.3s;
+    
+    &:hover {
+        transform: scale(1.05, 1.05);
+    }
+    .img {
+        margin: 20px 0 10px 0;
+        width: 90%;
+        border-radius: 10px;
+    }
+    h3 {
+        font-size: 23px;
+        margin-bottom: 0;
+    }
+} 
+
+@media (max-width: 872px) {
+    .article {
+        width: 40%;
+    }
+}

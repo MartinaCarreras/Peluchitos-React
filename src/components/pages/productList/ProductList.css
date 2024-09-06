@@ -1,0 +1,10 @@
+.main {
+    min-height: calc(100vh - 130px - 60px) !important;
+    background-color: #C6C5B9; 
+    border-left: #A9A89A 2.37212750185vw solid;
+    border-right: #A9A89A 2.37212750185vw solid;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}

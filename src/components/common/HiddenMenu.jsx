@@ -12,12 +12,13 @@ export const HiddenMenu = ({hamb, fullHamb, changeTo}) => {
       </h2>
       <div id="collapseTwo" className="accordion-collapse collapse accordion-body-container animate__slideOutDown" data-bs-parent="#accordionExample">
         <div className="accordion-body">
-          {!fullHamb && hamb.map(({ key, path, title })=>{
+          {!fullHamb && hamb.map(({ key, path, title, id })=>{
             return(
               <HeaderMenu
                 key={key}
                 path={path}
                 title={title}
+                id={id}
               />
             )
           })}

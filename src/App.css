@@ -8,9 +8,6 @@
   text-decoration: none !important;
   list-style: none;
 };
-main {
-  min-height: calc(100vh - 130px - 60px);
-};
 
 @media (max-width: 370px) {
   header {

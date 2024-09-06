@@ -2,48 +2,33 @@ import { createContext, useState } from 'react'
 
 export const HeaderContext = createContext()  //Creo el contexto del menu
 
+const menu = [
+    {key: "1", path: "/productos", title: "Productos", id: 'prod-menu'},
+    {key: "2", path: "/productos", title: "Cotización", id: 'cotiz-menu'},
+    {key: "3", path: "/productos", title: "Blog", id: 'blog-menu'},
+    {key: "4", path: "/productos", title: "Contacto", id: 'cont-menu'}
+]
+const hamb = [
+    {key: "1", path: "/productos", title: "Productos", id: 'prod-hamb'},
+    {key: "2", path: "/productos", title: "Cotización", id: 'cotiz-hamb'},
+    {key: "3", path: "/productos", title: "Blog", id: 'blog-hamb'},
+    {key: "4", path: "/productos", title: "Contacto", id: 'cont-hamb'}
+]
 
 const HeaderContextProvider = ( { children } ) => {
-    const [actMenu, setActMenu] = useState([{key: "1", path: "/productos", title: "Productos"},{key: "2", path: "/productos", title: "Cotización"},{key: "3", path: "/productos", title: "Blog"},{key: "4", path: "/productos", title: "Contacto"}]);
-    const [actHamb, setActHamb] = useState([]);
-    const [ width, setWidth ] = useState(window.innerWidth)
-    const [ fullHamb, setFullHamb ] = useState(false);
-    const [ showHamb, setShowHamb ] = useState(false);
+    const [actMenu, setActMenu] = useState(menu);  //Li de menu
+    const [actHamb, setActHamb] = useState(hamb);  //Li del menu hamburguesa
+    const [ width, setWidth ] = useState(window.innerWidth)  // tamaño de la pantalla
+    const [ showHamb, setShowHamb ] = useState(false); // Para mostrar el menu completo
 
     const setActWidth = () => {  //Función para actualizar el width
         setWidth( window.innerWidth )
     }
-    const movement = async( arrayFrom, arrayTo, setFrom, setTo ) => { //Función para mover de uno a otro
-        const tempFrom = [...arrayFrom];
-                
-        const tempTo = [...arrayTo];
-        tempTo.push(tempFrom.pop());
-
-        await setFrom(tempFrom);
-        await setTo(tempTo);        
-    }
-    const dones = async( done, limit, set, width ) =>  { //  Para saber si mover o no
-        if( ( !done && width < limit) ) {
-            await movement( actMenu, actHamb, setActMenu, setActHamb );            
-            set(true);
-        } else if (width >= limit && done) {
-            await movement( actHamb, actMenu, setActHamb, setActMenu );
-            set(false);
-        }
-        limit == 430 && FullHambFunction( done );        
-    }
-    const FullHambFunction = async( done ) => {
-        if ( width < 430 && !done ) {
-            setFullHamb(true);
-        } else if ( width >= 430 && done) {
-            setFullHamb(false)
-        }
-    }
     const changeToFullHamb = () => {
-        setShowHamb(!showHamb)        
+        width < 430 && setShowHamb(!showHamb)
     }
 
-    return <HeaderContext.Provider value={{ actMenu, actHamb, setActWidth, dones, width, fullHamb, showHamb, changeToFullHamb }} >
+    return <HeaderContext.Provider value={{ actMenu, actHamb, setActWidth, width, showHamb, changeToFullHamb }} >
         { children }
     </HeaderContext.Provider>
 }
